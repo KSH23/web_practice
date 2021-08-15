@@ -10,8 +10,6 @@ body {
 }
 
 .iphone {
-  width: 380px;
-  height: auto;
   flex: 0 0 100px;
 }
 
@@ -21,8 +19,8 @@ body {
 
 .moving-img {
   position: absolute;
-  top: 87px;
-  left: 113px;
+  top: 99px;
+  left: 150px;
 }
 
 .login {
@@ -34,6 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 14px; 
+  border: 1px solid rgb(219, 219, 219);
 }
 
 .icon {
@@ -61,6 +60,14 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+@media (max-width: 576px) {
+  .mobile {
+    background-color: rgb(250, 250, 250);
+    border: 0px;
+  }
 }
 
 .app {
@@ -84,4 +91,12 @@ body {
 
 .gap {
   margin-bottom: 70px;
+}
+
+select {
+  text-align-last: center;
+  width: 70px;
+  color: rgb(109, 116, 125);
+  border: 0px;
+  background-color: rgb(250, 250, 250)
 }

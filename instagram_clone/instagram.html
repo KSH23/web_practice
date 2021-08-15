@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="instagram.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <title>Instagram</title>
 </head>
 <body>
@@ -21,7 +25,7 @@
       <!-- 사진 -->
       <article class="d-lg-block d-none me-3 parent">
         <img src="iphone.png" class="iphone" alt="image1">
-        <div id="carouselExampleSlidesOnly" class="carousel slide moving-img" data-bs-ride="carousel">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade moving-img" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="image1.jpg" class="d-block" alt="...">
@@ -37,27 +41,39 @@
       </article>
 
       <!-- 입력 창 -->
-      <article class="justify-content-center ms-3">
+      <article class="justify-content-center pt-4">
         
         <!-- 로그인 -->
-        <div class="login border">
-          <div class="text-center pb-2">
+        <div class="login mobile py-0">
+
+          <!-- 로고 -->
+          <div class="text-center pb-2 pt-3">
             <img src="instagram_logo.png" alt="logo" class="logo-size">
           </div>
         
-
+          <!-- 아이디, 비밀번호, 버튼 -->
           <div class="p-2">
-            <input type="text" class="form-control mb-2 fs-10px bg-light" placeholder="전화번호, 사용자 이름 또는 이메일" aria-label="Username" aria-describedby="basic-addon1">
-            <input type="password" class="form-control mb-3 fs-10px bg-light" placeholder="비밀번호" aria-label="Password" aria-describedby="basic-addon1">
+            <div class="form-floating">
+              <input type="text" class="form-control mb-2 fs-10px bg-light" style="height: 40px" placeholder="전화번호, 사용자 이름 또는 이메일" id="floatingInput">
+              <label for="floatingInput" class="p-2 text-secondary">전화번호, 사용자 이름 또는 이메일</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control mb-3 fs-10px bg-light" style="height: 40px" placeholder="비밀번호" id="floatingPassword">
+              <label for="floatingPassword" class="p-2 text-secondary">비밀번호</label>
+            </div>
+    
             <button type="button" class="btn btn-primary form-control fs-14px mb-2">로그인</button>
           </div>
           
-          <div class="d-flex">
+          <!-- hr 또는 hr -->
+          <div class="d-flex px-2">
             <hr class="my-auto flex-grow-1">
             <div class="px-4 text-secondary fw-bold fs-10px">또는</div>
             <hr class="my-auto flex-grow-1">
           </div>
           
+          <!-- 페이스북 로그인, 비밀번호 찾기 -->
           <a href="#" class="text-decoration-none text-center p-3 fw-bold facebook">
             <img src="facebook.png" class="icon mb-1" alt="facebook">
             Facebook으로 로그인
@@ -67,16 +83,17 @@
         </div>
 
         <!-- 가입 항목 -->
-        <div class="signin border">
+        <div class="signin mobile">
           <span class="me-2">계정이 없으신가요?</span>
           <a href="#" class="text-decoration-none fw-bold">가입하기</a>
         </div>
       
+        <!-- 앱 다운로드 -->
         <div class="app">
           <span class="p-3">앱을 다운로드 하세요.</span>
           <div>
-            <img src="app_store.png" alt="app_store" class="download-img">
-            <img src="google_play.png" alt="google_play" class="download-img">
+            <a href="#"><img src="app_store.png" alt="app_store" class="download-img"></a>
+            <a href="#"><img src="google_play.png" alt="google_play" class="download-img"></a>
           </div>
           
         </div>
@@ -86,6 +103,8 @@
 
     <!-- 하단 -->
     <section class="pt-5 fs-10px">
+      
+      <!-- 첫번째 줄 목록 -->
       <div class="d-flex flex-wrap justify-content-center">
         <div class="p-1">
           <a href="#" class="text-decoration-none text-secondary p-1">소개</a>
@@ -119,6 +138,7 @@
         </div>
       </div>
 
+      <!-- 두번째 줄 목록 -->
       <div class="d-flex flex-wrap justify-content-center">
         <div class="p-1">
           <a href="#" class="text-decoration-none text-secondary p-1">뷰티</a>
@@ -143,24 +163,35 @@
         </div>
       </div>
 
+      <!-- 세번째 줄 목록 -->
       <div class="d-flex justify-content-center align-items-center pt-2">
-        <div class="dropdown">
-          <button class="btn btn-link dropdown-toggle text-decoration-none text-secondary fs-10px" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            한국어
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">country1</a></li>
-            <li><a class="dropdown-item" href="#">country2</a></li>
-            <li><a class="dropdown-item" href="#">country3</a></li>
-            <li><a class="dropdown-item" href="#">country4</a></li>
-            <li><a class="dropdown-item" href="#">country5</a></li>
-            <li><a class="dropdown-item" href="#">country6</a></li>
-            <li><a class="dropdown-item" href="#">country7</a></li>
-            <li><a class="dropdown-item" href="#">country8</a></li>
-            <li><a class="dropdown-item" href="#">country9</a></li>          
-          </ul>
-        </div>
-        <span class="ps-2 text-secondary">© 2021 Instagram from Facebook</span>
+        <select name="choice">
+          <option value="first">random country</option>
+          <option value="second" selected>한국어</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+          <option value="third">random country</option>
+        </select>
+        <span class="ps-3 text-secondary">© 2021 Instagram from Facebook</span>
 
 
 
