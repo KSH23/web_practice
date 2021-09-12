@@ -4,6 +4,12 @@ body {
   font-family: helvetica;
 }
 
+@media (max-width: 640px) {
+  body {
+    padding-top: 30px;
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -76,12 +82,84 @@ input:focus {
 }
 
 .post {
-  max-width: 614px;
+  width: 600px;
+  height: 2000px;
   background-color: white;
   border: 1px solid rgb(219, 219, 219);
 }
 
-.flex-article{
+@media (max-width: 640px) {
+  .post {
+    width:100vw;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+.post-uploader {
+  height: 60px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-uploader img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.post-uploader-ID {
+  color: #262626;
+  font-size: 14px;
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.story {
+  height: 116px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 12px;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+li {
+  list-style-type: none;
+  padding-right: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+li a {
+  color: #262626;
+}
+
+.story-img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+
+.flex-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-article {
   display: flex;
   flex-direction: row;
   max-width: 935px;
@@ -103,6 +181,9 @@ article img {
 
 aside {
   width: 293px;
+  position: sticky;
+  top: 89px;
+  align-self: flex-start;
 }
 
 @media (max-width: 1000px) {
